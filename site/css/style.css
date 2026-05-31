@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0f0f0f;
+    color: #f0f0f0;
+}
+
+/* НАВИГАЦИЯ */
+header {
+    background-color: #1a1a1a;
+    padding: 16px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #4f9eff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.2s;
+}
+
+nav ul a:hover {
+    color: #4f9eff;
+}
+
+/* ГЛАВНЫЙ БЛОК */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+}
+
+.hero h1 {
+    font-size: 56px;
+    margin-bottom: 20px;
+    color: #4f9eff;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #aaa;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.btn {
+    background-color: #4f9eff;
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background-color: #3a8aee;
+}
+
+/* КАРТОЧКИ */
+.features {
+    padding: 80px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+.cards {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 32px;
+    width: 300px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #aaa;
+    line-height: 1.6;
+}
+
+/* ФУТЕР */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #1a1a1a;
+    color: #555;
+    border-top: 1px solid #2a2a2a;
+}
