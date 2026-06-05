@@ -1,63 +1,84 @@
-/* ABOUT GRID */
+/* ==================== ABOUT GRID ==================== */
 .about-grid {
     display: flex;
-    gap: 24px;
-    max-width: 1100px;
-    margin: 60px auto;
+    gap: 28px;
+    max-width: 1200px;
+    margin: 80px auto;
     padding: 0 20px;
     flex-wrap: wrap;
 }
 
 .about-card {
     flex: 1;
-    min-width: 260px;
+    min-width: 300px;
     background: #1a1a1a;
     border: 1px solid #2a2a2a;
     border-radius: 16px;
-    padding: 36px 28px;
-    transition: transform 0.3s, border-color 0.3s;
+    padding: 40px 32px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, transparent, #4f9eff, transparent);
+    transform: scaleX(0);
+    transition: transform 0.4s;
 }
 
 .about-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-10px);
     border-color: #4f9eff;
+    box-shadow: 0 20px 40px rgba(79, 158, 255, 0.12);
+}
+
+.about-card:hover::before {
+    transform: scaleX(1);
 }
 
 .about-card-icon {
-    font-size: 36px;
-    margin-bottom: 16px;
+    font-size: 42px;
+    margin-bottom: 20px;
+    display: block;
 }
 
 .about-card h2 {
-    font-size: 22px;
-    margin-bottom: 12px;
+    font-size: 24px;
+    margin-bottom: 16px;
     color: #fff;
 }
 
 .about-card p {
     color: #aaa;
-    line-height: 1.8;
+    line-height: 1.7;
 }
 
-/* HOW IT WORKS */
+/* ==================== HOW IT WORKS ==================== */
 .how-it-works {
     background: #111;
-    padding: 80px 20px;
+    padding: 100px 20px;
     text-align: center;
 }
 
 .how-it-works h2 {
-    font-size: 32px;
-    margin-bottom: 50px;
+    font-size: 36px;
+    margin-bottom: 70px;
+    color: #fff;
 }
 
 .steps {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: 24px;
     flex-wrap: wrap;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -65,56 +86,89 @@
     background: #1a1a1a;
     border: 1px solid #2a2a2a;
     border-radius: 16px;
-    padding: 32px 24px;
-    width: 240px;
+    padding: 40px 28px;
+    width: 280px;
     text-align: left;
-    transition: border-color 0.3s;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
 }
 
-.step:hover {
+.step.glow {
     border-color: #4f9eff;
+    box-shadow: 0 0 25px rgba(79, 158, 255, 0.35),
+                0 0 45px rgba(79, 158, 255, 0.15);
+    transform: translateY(-4px);
+}
+
+.step::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, transparent, #4f9eff, transparent);
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+
+.step.glow::before {
+    transform: scaleX(1);
 }
 
 .step-number {
-    font-size: 36px;
+    font-size: 38px;
     font-weight: 800;
-    color: rgba(79,158,255,0.3);
-    margin-bottom: 12px;
+    color: #4f9eff;
+    opacity: 0.9;
+    margin-bottom: 18px;
+    line-height: 1;
 }
 
 .step-content h3 {
-    font-size: 17px;
-    margin-bottom: 8px;
+    font-size: 19px;
+    margin-bottom: 12px;
+    color: #fff;
 }
 
 .step-content p {
     color: #aaa;
-    font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.65;
+    font-size: 15px;
 }
 
 .step-arrow {
-    font-size: 28px;
+    font-size: 34px;
     color: #4f9eff;
-    opacity: 0.5;
+    opacity: 0.4;
+    padding-top: 30px;
+    transition: all 0.4s ease;
 }
 
-/* TECH */
+.step-arrow.glow {
+    opacity: 0.95;
+    transform: scale(1.15);
+    text-shadow: 0 0 15px rgba(79, 158, 255, 0.6);
+}
+
+/* ==================== TECHNOLOGIES ==================== */
 .tech-section {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 80px 20px;
+    padding: 100px 20px;
     text-align: center;
 }
 
 .tech-section h2 {
-    font-size: 32px;
-    margin-bottom: 50px;
+    font-size: 36px;
+    margin-bottom: 60px;
+    color: #fff;
 }
 
 .tech-grid {
     display: flex;
-    gap: 20px;
+    gap: 24px;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -122,32 +176,62 @@
 .tech-item {
     background: #1a1a1a;
     border: 1px solid #2a2a2a;
-    border-radius: 12px;
-    padding: 28px 24px;
-    width: 220px;
+    border-radius: 16px;
+    padding: 32px 24px;
+    width: 240px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
-    transition: transform 0.3s, border-color 0.3s;
+    gap: 12px;
+    transition: all 0.4s ease;
 }
 
 .tech-item:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px);
     border-color: #4f9eff;
+    box-shadow: 0 15px 30px rgba(79, 158, 255, 0.1);
 }
 
 .tech-icon {
-    font-size: 32px;
+    font-size: 36px;
 }
 
 .tech-name {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
+    color: #fff;
+    text-align: center;
 }
 
 .tech-desc {
-    font-size: 13px;
+    font-size: 14px;
     color: #aaa;
     text-align: center;
+    line-height: 1.5;
+}
+
+/* ==================== STAGGERED PAGE HERO ANIMATION ==================== */
+/* Очень плавная анимация, как на главной странице */
+.page-hero-content > * {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: all 1.35s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.page-hero-content .page-tag {
+    transition-delay: 0.3s;
+}
+
+.page-hero-content h1 {
+    transition-delay: 0.7s;
+}
+
+.page-hero-content p {
+    transition-delay: 1.2s;
+}
+
+/* Активное состояние */
+.page-hero-content.visible > * {
+    opacity: 1;
+    transform: translateY(0);
 }
