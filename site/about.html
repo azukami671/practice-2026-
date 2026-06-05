@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О проекте — Не забудь</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Не забудь</div>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html" class="active">О проекте</a></li>
+                <li><a href="team.html">Участники</a></li>
+                <li><a href="journal.html">Журнал</a></li>
+                <li><a href="resources.html">Ресурсы</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="page-hero-content">
+                <span class="page-tag">Проект</span>
+                <h1>О проекте</h1>
+                <p>Геолокационные напоминания нового поколения</p>
+            </div>
+        </section>
+
+        <section class="about-grid">
+            <div class="about-card fade-in">
+                <div class="about-card-icon">🚫</div>
+                <h2>Проблема</h2>
+                <p>Существующие списки дел статичны — напоминание приходит утром, а не в момент когда вы проходите мимо нужного места. Вы можете забыть зайти в аптеку, даже если она у вас по пути.</p>
+            </div>
+            <div class="about-card fade-in">
+                <div class="about-card-icon">💡</div>
+                <h2>Решение</h2>
+                <p>«Не забудь» связывает задачу с геолокацией. Как только вы входите в зону действия нужного места — приложение присылает уведомление. Просто скажите: «Напомни купить хлеб, когда буду в Пятёрочке».</p>
+            </div>
+            <div class="about-card fade-in">
+                <div class="about-card-icon">🎯</div>
+                <h2>Целевая аудитория</h2>
+                <p>Люди которые ведут активный образ жизни и часто забывают сделать что-то по пути — зайти в магазин, забрать посылку, купить лекарства.</p>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <h2>Как это работает</h2>
+            <div class="steps">
+                <div class="step fade-in">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Создайте напоминание</h3>
+                        <p>Голосом или текстом введите задачу и укажите место на карте</p>
+                    </div>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step fade-in">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Приложение следит</h3>
+                        <p>Геозона активна в фоновом режиме, даже без интернета</p>
+                    </div>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step fade-in">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Получите уведомление</h3>
+                        <p>Как только вы в нужном месте — приложение напомнит</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tech-section">
+            <h2>Технологии</h2>
+            <div class="tech-grid">
+                <div class="tech-item fade-in">
+                    <span class="tech-icon">📱</span>
+                    <span class="tech-name">Flutter</span>
+                    <span class="tech-desc">Кроссплатформенная разработка</span>
+                </div>
+                <div class="tech-item fade-in">
+                    <span class="tech-icon">🗺️</span>
+                    <span class="tech-name">2ГИС / Яндекс.Карты</span>
+                    <span class="tech-desc">Геолокация и карты</span>
+                </div>
+                <div class="tech-item fade-in">
+                    <span class="tech-icon">📡</span>
+                    <span class="tech-name">Geofencing API</span>
+                    <span class="tech-desc">Отслеживание геозон</span>
+                </div>
+                <div class="tech-item fade-in">
+                    <span class="tech-icon">☁️</span>
+                    <span class="tech-name">VK Cloud</span>
+                    <span class="tech-desc">Облачная инфраструктура</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Ким Илья Васильевич, Андреева Ксения Никитична, Темченко Софья Игоревна. Учебный проект.</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>
