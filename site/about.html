@@ -21,11 +21,13 @@
     </nav>
   </header>
 
-  <section class="page-hero fade-in">
-    <span class="page-tag">О проекте</span>
-    <h1>«Не забудь»</h1>
-    <p>Специализированное мобильное приложение для <strong>контекстных гео-напоминаний</strong> нового поколения, созданное для российского рынка. Мы делаем так, чтобы вы никогда ничего не забыли по пути.</p>
-  </section>
+    <section class="page-hero fade-in">
+        <div class="page-hero-content">
+            <span class="page-tag">О проекте</span>
+            <h1>«Не забудь»</h1>
+            <p>Специализированное мобильное приложение для <strong>контекстных гео-напоминаний</strong> нового поколения, созданное для российского рынка. Мы делаем так, чтобы вы никогда ничего не забыли по пути.</p>
+        </div>
+    </section>
 
   <section class="context-blindness fade-in">
     <h2>Забываете о важных делах, проходя мимо? Мы это исправим.</h2>
@@ -199,17 +201,18 @@
     <p>© 2026 Ким Илья Васильевич, Андреева Ксения Никитична, Темченко Софья Игоревна. Учебный проект.</p>
   </footer>
 
-  <script>
+      <script>
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.15 });
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>
+
 </body>
 </html>
 
