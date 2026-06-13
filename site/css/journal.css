@@ -133,9 +133,8 @@
 .posts {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 28px;
     margin-bottom: 32px;
-    background-color: #121212;
 }
   
 .posts h2 {
@@ -238,7 +237,15 @@ article.post {
     color: #e5e7eb;
     font-weight: 500;
 }
-  
+
+.post-image {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    object-fit: contain;
+}
+
 .roadmap {
     border-radius: 16px;
     border: 1px solid #2a2a2a;
