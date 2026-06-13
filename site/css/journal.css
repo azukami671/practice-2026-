@@ -66,47 +66,13 @@
     font-size: 12px;
 }
 
-.hero-map {
+.hero-visual-image {
     position: relative;
     width: 100%;
-    padding-bottom: 70%;
     border-radius: 10px;
     overflow: hidden;
-    background:
-        radial-gradient(circle at 25% 35%, rgba(56,189,248,0.18), transparent 55%),
-        radial-gradient(circle at 70% 40%, rgba(249,115,22,0.15), transparent 60%),
-        radial-gradient(circle at 50% 75%, rgba(52,211,153,0.16), transparent 60%),
-        repeating-linear-gradient(90deg, rgba(15,23,42,0.85), rgba(15,23,42,0.85) 1px, rgba(15,23,42,0.5) 1px, rgba(15,23,42,0.5) 16px),
-        repeating-linear-gradient(0deg, rgba(15,23,42,0.85), rgba(15,23,42,0.85) 1px, rgba(15,23,42,0.4) 1px, rgba(15,23,42,0.4) 16px);
+    object-fit: contain;
 }
-
-.hero-geo-circle {
-    position: absolute;
-    border-radius: 999px;
-    border: 1px dashed rgba(56,189,248,0.65);
-    box-shadow: 0 0 0 1px rgba(15,23,42,0.9);
-}
-
-.hero-geo-circle.small { width: 26%; height: 26%; top: 19%; left: 12%; }
-
-.hero-geo-circle.medium { width: 34%; height: 34%; top: 40%; left: 32%; border-color: rgba(52,211,153,0.7); }
-
-.hero-geo-circle.large { width: 44%; height: 44%; top: 24%; right: 8%; border-color: rgba(248,250,252,0.45); }
-
-.hero-pin {
-    position: absolute;
-    width: 9px;
-    height: 9px;
-    border-radius: 999px;
-    background: #38bdf8;
-    box-shadow: 0 0 12px rgba(56,189,248,0.8);
-}
-
-.hero-pin.home { top: 31%; left: 24%; }
-
-.hero-pin.work { top: 54%; left: 46%; background: #22c55e; box-shadow: 0 0 12px rgba(34,197,94,0.8); }
- 
-.hero-pin.shop { top: 40%; right: 22%; background: #f97316; box-shadow: 0 0 12px rgba(249,115,22,0.8); }
 
 .hero-legend {
     margin-top: 8px;
@@ -129,9 +95,9 @@
     border-radius: 999px;
 }
 
-.legend-dot.home { background: #38bdf8; }
+.legend-dot.mall { background: #26bb53; }
 
-.legend-dot.work { background: #22c55e; }
+.legend-dot.post { background: #d24ce4; }
 
 .legend-dot.shop { background: #f97316; }
 
